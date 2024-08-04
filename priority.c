@@ -64,6 +64,48 @@ void enqueue(pqueue *queue, data_type element) {
 
 
 // Implementation of the dequeue operation
+data_type dequeue(pqueue *queue) {
+	
+	// If the queue is empty there is nothing to dequeue anymore
+	if(queue->size == 0) {
+		printf("The queue is already empty\n");
+		return ERROR_VALUE;
+	}
+
+	// Otherwise create a new vector with one less element (the one at the top is cut
+	// out)
+	
+	uint size = queue->size - 1;
+	data_type element = queue->vector[0];
+	// Checking if the queue is made of one element or less
+	if (size < 1) {
+		printf("Returning the last element of the queue\n");
+
+		// Update the parameters
+		free(queue->vector);
+		queue->vector = NULL;
+		queue->size = size;
+
+		return element;
+	}
+	
+	data_type *vector = (data_type *)malloc((size) * sizeof(data_type));
+	// Check for memory allocation errors
+	if(!memcheck(vector)) {
+		return ERROR_VALUE;
+	}
+	
+	for(uint i = 0; i < size; i++) {
+		vector[i] = queue->vector[i + 1];
+	}
+
+	// Update the parameters
+	free(queue->vector);
+	queue->vector = vector;
+	queue->size = size;
+
+	return element;
+}
 
 
 // Implementation of a simple memory checker

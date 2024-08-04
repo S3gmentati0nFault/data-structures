@@ -10,6 +10,10 @@ int main(int argc, char *argv[]) {
 	queueprinter(queue);
 	printf("\n\n\n");
 
+	// Test immediate removal
+	dequeue(queue);
+	printf("\n\n\n");
+
 	// Test simple insertion
 	enqueue(queue, 10);
 	queueprinter(queue);
@@ -22,7 +26,12 @@ int main(int argc, char *argv[]) {
 	queueprinter(queue);
 	printf("\n\n\n");
 
-	queueprinter(queue);
+	// Test repeated deletions
+	for(int i = 0; i < 5; ++i) {
+		printf("%d\n", dequeue(queue));
+		queueprinter(queue);
+		printf("\n\n");
+	}
 
 	// Clean the memory
 	deconstructor(queue);
