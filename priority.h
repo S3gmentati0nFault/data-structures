@@ -13,6 +13,10 @@
 
 	pqueue *voidconstructor();
 
+	void deconstructor(pqueue *queue);
+
+	void structupdate(pqueue *queue, data_type *vector, uint size);
+
 	void enqueue(pqueue *queue, data_type element);
 
 	data_type dequeue(pqueue *queue);
@@ -20,7 +24,5 @@
 	bool memcheck(data_type *vector);
 
 	void queueprinter(pqueue *queue);
-
-	void deconstructor(pqueue *queue);
 
 #endif
