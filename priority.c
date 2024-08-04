@@ -4,6 +4,23 @@
 
 #include "priority.h"
 
+// Implementation of a "void constructor" for the queue
+pqueue *voidconstructor() {
+	pqueue *queue = (pqueue *)malloc(sizeof(pqueue));
+
+	queue->vector = NULL;
+	queue->size = 0;
+	return queue;
+}
+
+// Implementation of a deconstructor for the queue
+void deconstructor(pqueue *queue) {
+	// Free the internal vector
+	free(queue->vector);
+	// Free the queue structure
+	free(queue);
+}
+
 // Implementation of the enqueue operation
 void enqueue(pqueue *queue, data_type element) {
 	data_type *vector;
@@ -40,6 +57,7 @@ void enqueue(pqueue *queue, data_type element) {
 	vector[size - 1] = element;
 
 	// Update the parameters
+	free(queue->vector);
 	queue->vector = vector;
 	queue->size = size;
 }
@@ -52,6 +70,7 @@ void enqueue(pqueue *queue, data_type element) {
 bool memcheck(data_type *vector) {
 	if(vector == NULL) {
 		printf("There was a problem during the memory allocation process");
+		free(vector);
 		return false;
 	}
 

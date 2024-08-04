@@ -4,7 +4,7 @@
 #import <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	pqueue *queue = (pqueue *)malloc(sizeof(pqueue));
+	pqueue *queue = voidconstructor();
 
 	// Testing the empty queue
 	queueprinter(queue);
@@ -21,6 +21,11 @@ int main(int argc, char *argv[]) {
 	enqueue(queue, 13);
 	queueprinter(queue);
 	printf("\n\n\n");
+
+	queueprinter(queue);
+
+	// Clean the memory
+	deconstructor(queue);
 
 	return 0;
 }
