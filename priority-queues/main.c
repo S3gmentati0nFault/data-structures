@@ -37,6 +37,7 @@ int main(int argc, char *argv[]) {
 	deconstructor(queue);
 
 	// Test vector constructor
+	// PENDING: VALGRIND RUN
 	data_type *vector = (data_type *) malloc(10 * sizeof(data_type));
 	for(int i = 0; i < 10; ++i) {
 		vector[i] = i;
