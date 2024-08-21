@@ -27,4 +27,6 @@
 
 	void queueprinter(pqueue *queue);
 
+	bool isempty(pqueue *queue);
+
 #endif

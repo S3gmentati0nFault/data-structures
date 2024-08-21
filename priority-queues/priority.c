@@ -145,3 +145,12 @@ void structupdate(pqueue *queue, data_type *vector, uint size) {
 	queue->vector = vector;
 	queue->size = size;
 }
+
+
+// Implementation of a simple control that checks whether the data structure is empty
+bool isempty(pqueue *queue) {
+	if (queue->size == 0) {
+		return true;
+	}
+	return false;
+}
