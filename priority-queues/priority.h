@@ -13,6 +13,8 @@
 
 	pqueue *voidconstructor();
 
+	pqueue *vectorconstructor(data_type *vector, uint size);
+
 	void deconstructor(pqueue *queue);
 
 	void structupdate(pqueue *queue, data_type *vector, uint size);

@@ -15,6 +15,15 @@ pqueue *voidconstructor() {
 }
 
 
+// Implementation of a constructor that takes as input a vector and puts the data inside a queue
+pqueue *vectorconstructor(data_type *vector, uint size) {
+	pqueue *queue = voidconstructor();
+
+	structupdate(queue, vector, size);
+	return queue;
+}
+
+
 // Implementation of a deconstructor for the queue
 void deconstructor(pqueue *queue) {
 

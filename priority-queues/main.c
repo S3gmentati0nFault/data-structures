@@ -36,5 +36,15 @@ int main(int argc, char *argv[]) {
 	// Clean the memory
 	deconstructor(queue);
 
+	// Test vector constructor
+	data_type *vector = (data_type *) malloc(10 * sizeof(data_type));
+	for(int i = 0; i < 10; ++i) {
+		vector[i] = i;
+	}
+	queue = vectorconstructor(vector, 10);
+	queueprinter(queue);
+	deconstructor(queue);
+	printf("\n\n\n");
+
 	return 0;
 }
