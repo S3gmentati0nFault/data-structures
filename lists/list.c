@@ -84,3 +84,12 @@ void listprinter(list *list) {
 
 	return;
 }
+
+
+bool isempty(list *list) {
+	if(list->length == 0) {
+		return true;
+	}
+
+	return false;
+}
