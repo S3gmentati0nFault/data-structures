@@ -8,10 +8,14 @@ CFLAGS = -Wall -Wextra -std=c11
 TARGET = test
 
 # Object files
-OBJ = priority.o coloring.o main.o
+OBJ = utilities.o priority.o coloring.o main.o
 
 # Default target
 all: $(TARGET)
+
+# Rule for compiling priority.c into priority.o
+utilities.o:
+	$(CC) $(CFLAGS) -c ../utilities/utilities.c
 
 # Rule for compiling priority.c into priority.o
 priority.o:
