@@ -23,6 +23,14 @@ int main() {
 	free(i);
 	printf("\n\n\n");
 
+	// Deletion test
+	push(list, 7);
+	push(list, 8);
+	push(list, 9);
+	listprinter(list);
+	delete(list, 3);
+	delete(list, 2);
+
 	// Deconstruction test
 	listdeconstructor(list);
 
