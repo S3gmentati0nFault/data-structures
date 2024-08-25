@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 #include "mis.h"
-#include "../../lists/list.h"
+#include "../../lists/simple/list.h"
 #include "../utilities/utilities.h"
 
 list *mis(graph *G) {

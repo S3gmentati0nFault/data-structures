@@ -1,5 +1,5 @@
 #include "../utilities/utilities.h"
-#include "../../lists/list.h"
+#include "../../lists/simple/list.h"
 
 #ifndef MIS_H
 #define MIS_H

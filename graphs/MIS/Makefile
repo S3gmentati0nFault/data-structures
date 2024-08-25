@@ -19,11 +19,11 @@ utilities.o:
 
 # Rule for compiling node.c into node.o
 node.o:
-	$(CC) $(CFLAGS) -c ../../lists/node.c
+	$(CC) $(CFLAGS) -c ../../lists/utilities/node.c
 
 # Rule for compiling list.c into list.o
 list.o:
-	$(CC) $(CFLAGS) -c ../../lists/list.c
+	$(CC) $(CFLAGS) -c ../../lists/simple/list.c
 
 # Rule for compiling mis.c into mis.o
 mis.o:
