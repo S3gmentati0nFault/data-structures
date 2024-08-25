@@ -53,3 +53,6 @@ dkms.conf
 
 # Ignore the executable
 test
+
+# Ignore the testing file folder
+/testing-files
