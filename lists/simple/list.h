@@ -1,6 +1,6 @@
 #include <stdbool.h>
 
-#include "node.h"
+#include "../utilities/node.h"
 
 #ifndef LIST_H
 #define LIST_H

@@ -15,7 +15,7 @@ all: $(TARGET)
 
 # Rule for compiling node.c into node.o
 node.o:
-	$(CC) $(CFLAGS) -c node.c
+	$(CC) $(CFLAGS) -c ../utilities/node.c
 
 # Rule for compiling list.c into list.o
 list.o:

@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 #include "list.h"
-#include "node.h"
+#include "../utilities/node.h"
 
 list *emptylistconstructor() {
 	list *list = malloc(sizeof(list));
