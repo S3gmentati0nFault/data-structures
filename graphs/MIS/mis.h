@@ -8,4 +8,6 @@
 
 	void deleteneighbours(list *V, uint vertex, graph *G);
 
+	void writemis(list *mis);
+
 #endif

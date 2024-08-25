@@ -54,3 +54,15 @@ void deleteneighbours(list *V, uint vertex, graph *G) {
 
 	free(removelement(V, vertex));
 }
+
+
+void writemis(list *mis) {
+	char path[] = "../../testing-files/mis.txt";
+	FILE *fptr = fopen(path, "w");
+	
+	for(node *i = mis->head; i != NULL; i = i->next) {
+		fprintf(fptr, "%d, ", i->value);
+	}
+
+	fclose(fptr);
+}
