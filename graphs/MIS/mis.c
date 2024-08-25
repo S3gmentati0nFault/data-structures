@@ -47,10 +47,10 @@ void deleteneighbours(list *V, uint vertex, graph *G) {
 	for(uint i = 0; i < G->size; ++i) {
 		if (G->vertices[vertex][i] == 1) {
 			printf("%d\t", i);
-			free(delete(V, i));
+			free(removelement(V, i));
 		}
 	}
 	printf("\n");
 
-	free(delete(V, vertex));
+	free(removelement(V, vertex));
 }

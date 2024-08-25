@@ -22,7 +22,7 @@
 
 	node *pop(list *list);
 
-	node *delete(list *list, data_type value);
+	node *removelement(list *list, data_type value);
 
 	void enqueue(list *list, data_type value);
 

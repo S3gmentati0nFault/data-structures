@@ -28,8 +28,8 @@ int main() {
 	push(list, 8);
 	push(list, 9);
 	listprinter(list);
-	delete(list, 3);
-	delete(list, 2);
+	removelement(list, 3);
+	removelement(list, 2);
 
 	// Deconstruction test
 	listdeconstructor(list);
