@@ -8,19 +8,27 @@ CFLAGS = -Wall -Wextra -std=c11
 TARGET = test
 
 # Object files
-OBJ = utilities.o priority.o coloring.o main.o
+OBJ = utilities.o node.o list.o mis.o coloring.o main.o
 
 # Default target
 all: $(TARGET)
 
-# Rule for compiling priority.c into priority.o
+# Rule for compiling utilities.c into utilities.o
 utilities.o:
 	$(CC) $(CFLAGS) -c ../utilities/utilities.c
 
-# Rule for compiling priority.c into priority.o
-priority.o:
-	$(CC) $(CFLAGS) -c ../../priority-queues/priority.c
-	
+# rule for compiling node.c into node.o
+node.o:
+	$(CC) $(CFLAGS) -c ../../lists/utilities/node.c
+
+# Rule for compiling list.c into list.o
+list.o: node.o
+	$(CC) $(CFLAGS) -c ../../lists/simple/list.c
+
+# rule for compiling mis.c into mis.o
+mis.o: utilities.o node.o list.o
+	$(CC) $(CFLAGS) -c ../MIS/mis.c
+
 # Rule for compiling coloring.c into coloring.o
 coloring.o:
 	$(CC) $(CFLAGS) -c coloring.c
