@@ -13,10 +13,6 @@ OBJ = utilities.o main.o
 # Default target
 all: $(TARGET)
 
-# Rule for compiling mutils.c into mutils.o
-#mutils.o:
-#	$(CC) $(CFLAGS) -c ../../master-utilities/mutils.h
-
 # Rule for compiling utilities.c into utilities.o
 utilities.o:
 	$(CC) $(CFLAGS) -c ../utilities/utilities.c
